@@ -46,6 +46,7 @@
         -webkit-font-smoothing: antialiased;
       }
 
+      /* NAV */
       nav {
         background: var(--slate-900);
         position: sticky;
@@ -102,6 +103,7 @@
         color: var(--white) !important;
       }
 
+      /* HERO */
       .hero {
         background: var(--slate-800);
         padding: 96px 48px 80px;
@@ -114,7 +116,6 @@
         gap: 64px;
         align-items: center;
       }
-
       .hero-eyebrow {
         display: inline-flex;
         align-items: center;
@@ -133,7 +134,6 @@
         height: 1.5px;
         background: var(--teal-soft);
       }
-
       h1 {
         font-family: "Fraunces", serif;
         font-weight: 700;
@@ -148,17 +148,6 @@
         font-weight: 300;
         color: rgba(255, 255, 255, 0.5);
       }
-
-      .hero-tagline {
-        font-family: "Fraunces", serif;
-        font-size: 16px;
-        font-weight: 300;
-        color: rgba(255, 255, 255, 0.5);
-        margin-bottom: 28px;
-        font-style: italic;
-        letter-spacing: 0.01em;
-      }
-
       .hero-bio {
         font-size: 13.5px;
         font-weight: 300;
@@ -171,7 +160,6 @@
         color: rgba(255, 255, 255, 0.82);
         font-weight: 500;
       }
-
       .hero-actions {
         display: flex;
         gap: 12px;
@@ -189,21 +177,6 @@
       }
       .btn-fill:hover {
         background: var(--teal-soft);
-      }
-      .btn-line {
-        background: transparent;
-        color: rgba(255, 255, 255, 0.55);
-        padding: 10px 24px;
-        border-radius: 5px;
-        font-size: 12.5px;
-        font-weight: 600;
-        text-decoration: none;
-        border: 1px solid rgba(255, 255, 255, 0.15);
-        transition: all 0.18s;
-      }
-      .btn-line:hover {
-        color: var(--teal-soft);
-        border-color: var(--teal-soft);
       }
       .hero-card {
         background: var(--slate-900);
@@ -285,6 +258,7 @@
         }
       }
 
+      /* SECTIONS */
       .section {
         max-width: 1040px;
         margin: 0 auto;
@@ -293,7 +267,6 @@
       .section + .section {
         padding-top: 0;
       }
-
       .sec-label {
         font-size: 10px;
         font-weight: 600;
@@ -312,7 +285,6 @@
         background: var(--teal);
         opacity: 0.4;
       }
-
       h2 {
         font-family: "Fraunces", serif;
         font-weight: 600;
@@ -322,6 +294,7 @@
         line-height: 1.2;
       }
 
+      /* APPROACH */
       .approach-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -374,6 +347,7 @@
         line-height: 1.75;
       }
 
+      /* EXPERIENCE */
       .exp-wrap {
         background: var(--slate-900);
         padding: 72px 0;
@@ -393,11 +367,9 @@
         color: var(--white);
         margin-bottom: 48px;
       }
-
       .timeline {
         display: flex;
         flex-direction: column;
-        gap: 0;
         border-left: 1px solid rgba(255, 255, 255, 0.08);
         padding-left: 36px;
         margin-left: 8px;
@@ -427,7 +399,6 @@
         background: var(--teal);
         box-shadow: 0 0 0 4px rgba(59, 143, 168, 0.2);
       }
-
       .tl-meta {
         display: flex;
         align-items: center;
@@ -471,7 +442,6 @@
         color: var(--teal-soft);
         margin-right: 6px;
       }
-
       .tl-pts {
         list-style: none;
         display: flex;
@@ -487,13 +457,14 @@
         line-height: 1.7;
       }
       .tl-pts li::before {
-        content: "—";
+        content: "-";
         position: absolute;
         left: 0;
         color: var(--teal);
         font-size: 11px;
       }
 
+      /* SKILLS */
       .skills-section {
         background: var(--white);
         padding: 72px 0;
@@ -506,7 +477,6 @@
       .skills-inner h2 {
         margin-bottom: 40px;
       }
-
       .skills-table {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -547,76 +517,160 @@
         padding: 3px 10px;
       }
 
-      /* ── EDUCATION ─────────── */
+      /* ── BOTTOM: EDUCATION + LINKEDIN ── */
       .bottom-wrap {
+        background: var(--slate-900);
+        padding: 72px 0;
+      }
+      .bottom-inner {
         max-width: 1040px;
         margin: 0 auto;
-        padding: 72px 48px;
+        padding: 0 48px;
       }
-      .sec-label-dark {
-        color: var(--teal);
+      .bottom-inner .sec-label {
+        color: var(--teal-soft);
+      }
+      .bottom-inner .sec-label::after {
+        background: var(--teal-soft);
+      }
+      .bottom-inner h2 {
+        color: var(--white);
+        margin-bottom: 32px;
       }
 
+      .bottom-grid {
+        display: grid;
+        grid-template-columns: 0.9fr 1.1fr;
+        gap: 24px;
+        align-items: start;
+      }
+
+      /* Education card */
       .edu-card {
-        background: var(--white);
-        border: 1px solid var(--border);
-        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 12px;
         padding: 28px;
-        margin-top: 24px;
         display: flex;
-        gap: 20px;
+        flex-direction: column;
+        gap: 14px;
+        min-height: 100%;
+      }
+
+      .edu-card-top {
+        display: flex;
+        justify-content: space-between;
         align-items: flex-start;
+        gap: 12px;
       }
-      .edu-year-block {
-        text-align: center;
-        flex-shrink: 0;
-      }
-      .edu-year {
-        font-family: "Fraunces", serif;
-        font-size: 13px;
-        font-weight: 600;
-        color: var(--teal);
-        display: block;
-      }
-      .edu-year-from {
-        font-size: 11px;
-        color: var(--light);
-      }
-      .edu-vline {
-        width: 1px;
-        background: var(--border);
-        align-self: stretch;
-        flex-shrink: 0;
-      }
+
       .edu-deg {
         font-family: "Fraunces", serif;
-        font-size: 16px;
+        font-size: 18px;
         font-weight: 600;
-        color: var(--slate-800);
-        margin-bottom: 4px;
+        color: var(--white);
+        line-height: 1.35;
       }
+
+      .edu-years {
+        font-size: 11px;
+        font-weight: 600;
+        color: var(--teal-soft);
+        letter-spacing: 0.08em;
+        white-space: nowrap;
+        background: rgba(59, 143, 168, 0.12);
+        border: 1px solid rgba(59, 143, 168, 0.25);
+        padding: 4px 10px;
+        border-radius: 20px;
+      }
+
       .edu-inst {
-        font-size: 12.5px;
-        color: var(--muted);
-        margin-bottom: 6px;
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.52);
+        line-height: 1.7;
       }
+
       .edu-chip {
-        display: inline-block;
+        display: inline-flex;
+        align-items: center;
+        width: fit-content;
+        margin-top: 4px;
         font-size: 10px;
         font-weight: 600;
         letter-spacing: 0.1em;
         text-transform: uppercase;
-        color: var(--teal);
-        background: rgba(59, 143, 168, 0.07);
-        border: 1px solid rgba(59, 143, 168, 0.2);
-        padding: 2px 9px;
-        border-radius: 4px;
+        color: rgba(255, 255, 255, 0.4);
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 5px 10px;
+        border-radius: 5px;
       }
 
+      /* LinkedIn card */
+      .linkedin-card {
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 12px;
+        padding: 32px 28px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        min-height: 100%;
+
+        transition:
+          border-color 0.2s,
+          transform 0.2s;
+
+        text-align: center;
+      }
+
+      .linkedin-card:hover {
+        border-color: rgba(59, 143, 168, 0.35);
+        transform: translateY(-2px);
+      }
+
+      .li-top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+      }
+
+      .li-logo {
+        width: 58px;
+        height: 58px;
+        border-radius: 14px;
+        background: #0a66c2;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 28px;
+        font-weight: 800;
+
+        color: white;
+      }
+
+      .li-name {
+        font-family: "Fraunces", serif;
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--white);
+      }
+
+      .li-handle {
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.42);
+      }
+
+      /* FOOTER */
       footer {
         background: var(--slate-900);
-        border-top: 2px solid var(--teal);
-        padding: 28px 48px;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+        padding: 24px 48px;
       }
       .foot-inner {
         max-width: 1040px;
@@ -633,21 +687,8 @@
         color: rgba(255, 255, 255, 0.5);
         font-weight: 500;
       }
-      .foot-links {
-        display: flex;
-        gap: 22px;
-      }
-      .foot-links a {
-        font-size: 11px;
-        font-weight: 500;
-        color: rgba(255, 255, 255, 0.35);
-        text-decoration: none;
-        transition: color 0.18s;
-      }
-      .foot-links a:hover {
-        color: var(--teal-soft);
-      }
 
+      /* REVEAL */
       .reveal {
         opacity: 0;
         transform: translateY(16px);
@@ -670,8 +711,11 @@
         .skills-table {
           grid-template-columns: 1fr;
         }
-        .bottom-wrap {
-          padding: 48px 24px;
+        .bottom-grid {
+          grid-template-columns: 1fr;
+        }
+        .bottom-inner {
+          padding: 0 24px;
         }
         .section {
           padding: 48px 24px;
@@ -718,7 +762,7 @@
       <div class="hero-inner">
         <div>
           <div class="hero-eyebrow">Based in Gurugram, India</div>
-          <h1>Satvik<br />Sharma.</h1>
+          <h1>Satvik<br />Sharma</h1>
           <p class="hero-bio">
             I design and build
             <strong>scalable, distributed backend systems</strong>
@@ -742,8 +786,8 @@
           <div class="hc-row">
             <div class="hc-icon">🏢</div>
             <div>
-              Senior Associate, Technology<br /><span
-                style="color: rgba(255, 255, 255, 0.32); font-size: 11px"
+              Senior Associate, Technology<br />
+              <span style="color: rgba(255, 255, 255, 0.32); font-size: 11px"
                 >TechHaus Software Services</span
               >
             </div>
@@ -751,14 +795,6 @@
           <div class="hc-row">
             <div class="hc-icon">📍</div>
             Gurugram, Haryana
-          </div>
-          <div class="hc-divider"></div>
-          <div class="hc-label">Find me</div>
-          <div class="hc-row">
-            <div class="hc-icon">in</div>
-            <a href="https://linkedin.com/in/satvik-sharma31" target="_blank"
-              >satvik-sharma31</a
-            >
           </div>
           <div class="hc-divider"></div>
           <div class="hc-status">
@@ -809,12 +845,11 @@
       <div class="exp-inner">
         <div class="sec-label">Where I've been</div>
         <h2>Experience</h2>
-
         <div class="timeline">
           <div class="tl-item current reveal">
             <div class="tl-dot"></div>
             <div class="tl-meta">
-              <span class="tl-period">Apr 2026 - Present</span>
+              <span class="tl-period">Apr 2026 – Present</span>
               <span class="tl-badge">● Current</span>
             </div>
             <div class="tl-role">Senior Associate, Technology</div>
@@ -844,11 +879,10 @@
               </li>
             </ul>
           </div>
-
           <div class="tl-item reveal">
             <div class="tl-dot"></div>
             <div class="tl-meta">
-              <span class="tl-period">Dec 2022 - Mar 2026</span>
+              <span class="tl-period">Dec 2022 – Mar 2026</span>
             </div>
             <div class="tl-role">Associate, Technology</div>
             <div class="tl-co">
@@ -871,11 +905,10 @@
               </li>
             </ul>
           </div>
-
           <div class="tl-item reveal">
             <div class="tl-dot"></div>
             <div class="tl-meta">
-              <span class="tl-period">May 2022 - Dec 2022</span>
+              <span class="tl-period">May 2022 – Dec 2022</span>
             </div>
             <div class="tl-role">Associate Intern, Technology</div>
             <div class="tl-co">
@@ -901,105 +934,116 @@
     <!-- SKILLS -->
     <div id="skills" class="skills-section">
       <div class="skills-inner">
-        <div class="sec-label">Tools & technologies</div>
+        <div class="sec-label">Tools &amp; technologies</div>
         <h2>The stack</h2>
         <div class="skills-table" style="margin-top: 36px">
           <div class="sk-row reveal">
             <div class="sk-row-label">Core</div>
             <div class="sk-row-tags">
-              <span class="sk-tag">Java</span>
-              <span class="sk-tag">Spring Boot</span>
-              <span class="sk-tag">System Design</span>
-              <span class="sk-tag">LLD</span>
+              <span class="sk-tag">Java</span
+              ><span class="sk-tag">Spring Boot</span
+              ><span class="sk-tag">System Design</span
+              ><span class="sk-tag">LLD</span>
             </div>
           </div>
           <div class="sk-row reveal">
             <div class="sk-row-label">Cloud</div>
             <div class="sk-row-tags">
-              <span class="sk-tag">AWS EC2</span>
-              <span class="sk-tag">ECS</span>
-              <span class="sk-tag">Lambda</span>
-              <span class="sk-tag">VPC</span>
-              <span class="sk-tag">S3</span>
+              <span class="sk-tag">AWS EC2</span><span class="sk-tag">ECS</span
+              ><span class="sk-tag">Lambda</span><span class="sk-tag">VPC</span
+              ><span class="sk-tag">S3</span>
             </div>
           </div>
           <div class="sk-row reveal">
             <div class="sk-row-label">Languages</div>
             <div class="sk-row-tags">
-              <span class="sk-tag">Python</span>
-              <span class="sk-tag">Rust</span>
-              <span class="sk-tag">JavaScript</span>
+              <span class="sk-tag">Python</span><span class="sk-tag">Rust</span
+              ><span class="sk-tag">JavaScript</span>
             </div>
           </div>
           <div class="sk-row reveal">
             <div class="sk-row-label">Data</div>
             <div class="sk-row-tags">
-              <span class="sk-tag">MySQL</span>
-              <span class="sk-tag">PostgreSQL</span>
-              <span class="sk-tag">H2</span>
-              <span class="sk-tag">Power BI</span>
+              <span class="sk-tag">MySQL</span
+              ><span class="sk-tag">PostgreSQL</span
+              ><span class="sk-tag">H2</span
+              ><span class="sk-tag">Power BI</span>
             </div>
           </div>
           <div class="sk-row reveal">
             <div class="sk-row-label">APIs</div>
             <div class="sk-row-tags">
-              <span class="sk-tag">REST</span>
-              <span class="sk-tag">GraphQL</span>
-              <span class="sk-tag">OAuth 2.0</span>
-              <span class="sk-tag">JWT</span>
+              <span class="sk-tag">REST</span><span class="sk-tag">GraphQL</span
+              ><span class="sk-tag">OAuth 2.0</span
+              ><span class="sk-tag">JWT</span>
             </div>
           </div>
           <div class="sk-row reveal">
             <div class="sk-row-label">Frontend</div>
             <div class="sk-row-tags">
-              <span class="sk-tag">Angular</span>
-              <span class="sk-tag">Node.js</span>
-              <span class="sk-tag">HTML</span>
-              <span class="sk-tag">CSS</span>
+              <span class="sk-tag">Angular</span
+              ><span class="sk-tag">Node.js</span
+              ><span class="sk-tag">HTML</span><span class="sk-tag">CSS</span>
             </div>
           </div>
           <div class="sk-row reveal">
             <div class="sk-row-label">Practice</div>
             <div class="sk-row-tags">
-              <span class="sk-tag">Agile / Scrum</span>
-              <span class="sk-tag">Unit Testing</span>
-              <span class="sk-tag">Spring Security</span>
-              <span class="sk-tag">SDLC</span>
+              <span class="sk-tag">Agile / Scrum</span
+              ><span class="sk-tag">Unit Testing</span
+              ><span class="sk-tag">Spring Security</span
+              ><span class="sk-tag">SDLC</span>
             </div>
           </div>
           <div class="sk-row reveal">
             <div class="sk-row-label">Prompt Eng.</div>
             <div class="sk-row-tags">
-              <span class="sk-tag">Claude</span>
-              <span class="sk-tag">OpenAI</span>
-              <span class="sk-tag">Copilot</span>
-              <span class="sk-tag">Gemini</span>
-              <span class="sk-tag">Replit</span>
-              <span class="sk-tag">Perplexity</span>
+              <span class="sk-tag">Claude</span
+              ><span class="sk-tag">OpenAI</span
+              ><span class="sk-tag">Copilot</span
+              ><span class="sk-tag">Gemini</span
+              ><span class="sk-tag">Replit</span
+              ><span class="sk-tag">Perplexity</span>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- EDUCATION -->
+    <!-- EDUCATION + LINKEDIN -->
     <div class="bottom-wrap">
-      <div class="reveal">
-        <div class="sec-label sec-label-dark">Background</div>
-        <h2>Education</h2>
-        <div class="edu-card">
-          <div class="edu-year-block">
-            <span class="edu-year">2018</span>
-            <div class="edu-year-from" style="margin-top: 2px">2022 –</div>
-          </div>
-          <div class="edu-vline"></div>
-          <div>
-            <div class="edu-deg">Bachelor of Technology</div>
+      <div class="bottom-inner">
+        <div class="sec-label">Background &amp; connect</div>
+        <h2>Education &amp; LinkedIn</h2>
+        <div class="bottom-grid">
+          <!-- Education -->
+          <div class="edu-card reveal">
+            <div class="edu-card-top">
+              <div class="edu-deg">Bachelor of Technology</div>
+              <div class="edu-years">2018 – 2022</div>
+            </div>
             <div class="edu-inst">
               Guru Gobind Singh Indraprastha University, Delhi
             </div>
-            <div class="edu-chip">Electrical & Electronics Engineering</div>
+            <div class="edu-chip">Electrical &amp; Electronics Engineering</div>
           </div>
+
+          <!-- LinkedIn -->
+          <a
+            href="https://linkedin.com/in/satvik-sharma31"
+            target="_blank"
+            class="linkedin-card reveal"
+            style="text-decoration: none"
+          >
+            <div class="li-top">
+              <div class="li-logo">in</div>
+
+              <div>
+                <div class="li-name">Satvik Sharma</div>
+                <div class="li-handle">linkedin.com/in/satvik-sharma31</div>
+              </div>
+            </div>
+          </a>
         </div>
       </div>
     </div>
@@ -1009,11 +1053,6 @@
       <div class="foot-inner">
         <div class="foot-left">
           <strong>Satvik Sharma</strong> · Senior SDE · Gurugram, India
-        </div>
-        <div class="foot-links">
-          <a href="https://linkedin.com/in/satvik-sharma31" target="_blank"
-            >LinkedIn</a
-          >
         </div>
       </div>
     </footer>
