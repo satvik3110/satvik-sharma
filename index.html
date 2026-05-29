@@ -18,16 +18,16 @@
       }
 
       :root {
-        --slate-900: #0f1923;
-        --slate-800: #1a2535;
-        --slate-700: #243247;
-        --teal: #3b8fa8;
-        --teal-soft: #5aaec6;
-        --gold: #c4964a;
+        --slate-900: #0f172a;
+        --slate-800: #1e293b;
+        --slate-700: #334155;
+        --teal: #2563eb;
+        --teal-soft: #60a5fa;
+        --gold: #1d4ed8;
         --white: #ffffff;
-        --page: #f4f6f8;
+        --page: #f8fafc;
         --border: #e2e8f0;
-        --text: #2d3748;
+        --text: #0f172a;
         --muted: #64748b;
         --light: #94a3b8;
       }
@@ -103,12 +103,11 @@
         color: var(--white) !important;
       }
 
-      /* HERO */
-      .hero {
+      .main {
         background: var(--slate-800);
         padding: 96px 48px 80px;
       }
-      .hero-inner {
+      .main-inner {
         max-width: 1040px;
         margin: 0 auto;
         display: grid;
@@ -116,7 +115,7 @@
         gap: 64px;
         align-items: center;
       }
-      .hero-eyebrow {
+      .main-eyebrow {
         display: inline-flex;
         align-items: center;
         gap: 8px;
@@ -127,7 +126,7 @@
         color: var(--teal-soft);
         margin-bottom: 20px;
       }
-      .hero-eyebrow::before {
+      .main-eyebrow::before {
         content: "";
         display: inline-block;
         width: 24px;
@@ -148,7 +147,7 @@
         font-weight: 300;
         color: rgba(255, 255, 255, 0.5);
       }
-      .hero-bio {
+      .main-bio {
         font-size: 13.5px;
         font-weight: 300;
         color: rgba(255, 255, 255, 0.58);
@@ -156,11 +155,11 @@
         max-width: 480px;
         margin-bottom: 36px;
       }
-      .hero-bio strong {
+      .main-bio strong {
         color: rgba(255, 255, 255, 0.82);
         font-weight: 500;
       }
-      .hero-actions {
+      .main-actions {
         display: flex;
         gap: 12px;
         flex-wrap: wrap;
@@ -178,7 +177,7 @@
       .btn-fill:hover {
         background: var(--teal-soft);
       }
-      .hero-card {
+      .main-card {
         background: var(--slate-900);
         border-radius: 12px;
         padding: 32px 28px;
@@ -190,7 +189,7 @@
         letter-spacing: 0.16em;
         text-transform: uppercase;
         color: var(--teal-soft);
-        border-bottom: 1px solid rgba(91, 174, 198, 0.18);
+        border-bottom: 1px solid rgba(217, 119, 6, 0.18);
         padding-bottom: 8px;
         margin-bottom: 16px;
       }
@@ -217,8 +216,8 @@
       .hc-icon {
         width: 28px;
         height: 28px;
-        background: rgba(59, 143, 168, 0.1);
-        border: 1px solid rgba(59, 143, 168, 0.2);
+        background: rgba(217, 119, 6, 0.1);
+        border: 1px solid rgba(217, 119, 6, 0.2);
         border-radius: 6px;
         display: flex;
         align-items: center;
@@ -314,7 +313,7 @@
       }
       .approach-card:hover {
         transform: translateY(-3px);
-        box-shadow: 0 8px 24px rgba(15, 25, 35, 0.08);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
       }
       .approach-card::before {
         content: "";
@@ -397,7 +396,7 @@
       }
       .tl-item.current .tl-dot {
         background: var(--teal);
-        box-shadow: 0 0 0 4px rgba(59, 143, 168, 0.2);
+        box-shadow: 0 0 0 4px rgba(217, 119, 6, 0.2);
       }
       .tl-meta {
         display: flex;
@@ -409,8 +408,8 @@
         font-size: 11px;
         font-weight: 500;
         color: var(--teal-soft);
-        background: rgba(59, 143, 168, 0.1);
-        border: 1px solid rgba(59, 143, 168, 0.2);
+        background: rgba(217, 119, 6, 0.1);
+        border: 1px solid rgba(217, 119, 6, 0.2);
         border-radius: 20px;
         padding: 2px 10px;
       }
@@ -517,9 +516,127 @@
         padding: 3px 10px;
       }
 
+      /* PROJECTS */
+      .projects-section {
+        background: var(--slate-900);
+        padding: 72px 0;
+      }
+      .projects-inner {
+        max-width: 1040px;
+        margin: 0 auto;
+        padding: 0 48px;
+      }
+      .projects-inner .sec-label {
+        color: var(--teal-soft);
+      }
+      .projects-inner .sec-label::after {
+        background: var(--teal-soft);
+      }
+      .projects-inner h2 {
+        color: var(--white);
+        margin-bottom: 40px;
+      }
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin-top: 40px;
+      }
+      .proj-card {
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 10px;
+        padding: 28px 24px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        text-decoration: none;
+        color: inherit;
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+      }
+      .proj-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+      }
+      .proj-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: var(--teal);
+      }
+      .proj-title {
+        font-family: "Fraunces", serif;
+        font-size: 17px;
+        font-weight: 600;
+        color: var(--white);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .proj-title svg {
+        opacity: 0.35;
+        flex-shrink: 0;
+        transition: opacity 0.18s;
+      }
+      .proj-card:hover .proj-title svg {
+        opacity: 0.65;
+      }
+      .proj-pts {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        flex: 1;
+      }
+      .proj-pts li {
+        font-size: 12.5px;
+        color: rgba(255, 255, 255, 0.58);
+        padding-left: 16px;
+        position: relative;
+        line-height: 1.7;
+      }
+      .proj-pts li::before {
+        content: "-";
+        position: absolute;
+        left: 0;
+        color: var(--teal);
+        font-size: 11px;
+      }
+      .proj-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-top: 4px;
+      }
+      .proj-tag {
+        font-size: 11px;
+        font-weight: 500;
+        color: var(--teal-soft);
+        background: rgba(217, 119, 6, 0.12);
+        border: 1px solid rgba(217, 119, 6, 0.25);
+        border-radius: 4px;
+        padding: 2px 9px;
+      }
+
+      @media (max-width: 780px) {
+        .projects-grid {
+          grid-template-columns: 1fr;
+        }
+        .projects-inner {
+          padding: 0 24px;
+        }
+      }
+
       /* ── BOTTOM: EDUCATION + LINKEDIN ── */
       .bottom-wrap {
-        background: var(--slate-900);
+        background: var(--page);
         padding: 72px 0;
       }
       .bottom-inner {
@@ -528,13 +645,13 @@
         padding: 0 48px;
       }
       .bottom-inner .sec-label {
-        color: var(--teal-soft);
+        color: var(--teal);
       }
       .bottom-inner .sec-label::after {
-        background: var(--teal-soft);
+        background: var(--teal);
       }
       .bottom-inner h2 {
-        color: var(--white);
+        color: var(--slate-800);
         margin-bottom: 32px;
       }
 
@@ -547,8 +664,8 @@
 
       /* Education card */
       .edu-card {
-        background: rgba(255, 255, 255, 0.04);
-        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: var(--white);
+        border: 1px solid var(--border);
         border-radius: 12px;
         padding: 28px;
         display: flex;
@@ -568,7 +685,7 @@
         font-family: "Fraunces", serif;
         font-size: 18px;
         font-weight: 600;
-        color: var(--white);
+        color: var(--slate-800);
         line-height: 1.35;
       }
 
@@ -578,15 +695,15 @@
         color: var(--teal-soft);
         letter-spacing: 0.08em;
         white-space: nowrap;
-        background: rgba(59, 143, 168, 0.12);
-        border: 1px solid rgba(59, 143, 168, 0.25);
+        background: rgba(217, 119, 6, 0.12);
+        border: 1px solid rgba(217, 119, 6, 0.25);
         padding: 4px 10px;
         border-radius: 20px;
       }
 
       .edu-inst {
         font-size: 13px;
-        color: rgba(255, 255, 255, 0.52);
+        color: var(--muted);
         line-height: 1.7;
       }
 
@@ -599,17 +716,17 @@
         font-weight: 600;
         letter-spacing: 0.1em;
         text-transform: uppercase;
-        color: rgba(255, 255, 255, 0.4);
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: var(--muted);
+        background: var(--page);
+        border: 1px solid var(--border);
         padding: 5px 10px;
         border-radius: 5px;
       }
 
       /* LinkedIn card */
       .linkedin-card {
-        background: rgba(255, 255, 255, 0.04);
-        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: var(--white);
+        border: 1px solid var(--border);
         border-radius: 12px;
         padding: 32px 28px;
 
@@ -627,7 +744,7 @@
       }
 
       .linkedin-card:hover {
-        border-color: rgba(59, 143, 168, 0.35);
+        border-color: rgba(217, 119, 6, 0.5);
         transform: translateY(-2px);
       }
 
@@ -658,12 +775,12 @@
         font-family: "Fraunces", serif;
         font-size: 18px;
         font-weight: 600;
-        color: var(--white);
+        color: var(--slate-800);
       }
 
       .li-handle {
         font-size: 13px;
-        color: rgba(255, 255, 255, 0.42);
+        color: var(--muted);
       }
 
       /* FOOTER */
@@ -702,7 +819,7 @@
       }
 
       @media (max-width: 780px) {
-        .hero-inner {
+        .main-inner {
           grid-template-columns: 1fr;
         }
         .approach-grid {
@@ -729,7 +846,7 @@
         .nav-inner {
           padding: 0 24px;
         }
-        .hero {
+        .main {
           padding: 60px 24px 52px;
         }
         footer {
@@ -747,6 +864,24 @@
           <a href="#approach">Approach</a>
           <a href="#experience">Experience</a>
           <a href="#skills">Stack</a>
+          <a href="#projects">Projects</a>
+          <a
+            href="https://github.com/sharmasatvik"
+            target="_blank"
+            title="GitHub"
+            style="display: flex; align-items: center"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="17"
+              height="17"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              style="display: block"
+            >
+              <path
+                d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"
+              /></svg
+          ></a>
           <a
             href="https://linkedin.com/in/satvik-sharma31"
             target="_blank"
@@ -757,13 +892,13 @@
       </div>
     </nav>
 
-    <!-- HERO -->
-    <div class="hero">
-      <div class="hero-inner">
+    <!-- Main -->
+    <div class="main">
+      <div class="main-inner">
         <div>
-          <div class="hero-eyebrow">Based in Gurugram, India</div>
+          <div class="main-eyebrow">Based in Gurugram, India</div>
           <h1>Satvik<br />Sharma</h1>
-          <p class="hero-bio">
+          <p class="main-bio">
             I design and build
             <strong>scalable, distributed backend systems</strong>
             that teams can rely on in production - performant under load,
@@ -771,7 +906,7 @@
             My real interest is in getting the architecture right before writing
             a line of code.
           </p>
-          <div class="hero-actions">
+          <div class="main-actions">
             <a
               href="https://linkedin.com/in/satvik-sharma31"
               target="_blank"
@@ -781,7 +916,7 @@
           </div>
         </div>
 
-        <div class="hero-card">
+        <div class="main-card">
           <div class="hc-label">Currently</div>
           <div class="hc-row">
             <div class="hc-icon">🏢</div>
@@ -940,10 +1075,10 @@
           <div class="sk-row reveal">
             <div class="sk-row-label">Core</div>
             <div class="sk-row-tags">
-              <span class="sk-tag">Java</span
-              ><span class="sk-tag">Spring Boot</span
-              ><span class="sk-tag">System Design</span
-              ><span class="sk-tag">LLD</span>
+              <span class="sk-tag">Java</span>
+              <span class="sk-tag">Spring Boot</span>
+              <span class="sk-tag">System Design</span>
+              <span class="sk-tag">LLD</span>
             </div>
           </div>
           <div class="sk-row reveal">
@@ -989,23 +1124,170 @@
           <div class="sk-row reveal">
             <div class="sk-row-label">Practice</div>
             <div class="sk-row-tags">
-              <span class="sk-tag">Agile / Scrum</span
-              ><span class="sk-tag">Unit Testing</span
-              ><span class="sk-tag">Spring Security</span
-              ><span class="sk-tag">SDLC</span>
+              <span class="sk-tag">Agile / Scrum</span>
+              <span class="sk-tag">Unit Testing</span>
+              <span class="sk-tag">Spring Security</span>
+              <span class="sk-tag">SDLC</span>
+              <span class="sk-tag">Domain Driven Design</span>
+              <span class="sk-tag">OOPS</span>
+              <span class="sk-tag">Low Level Design</span>
+              <span class="sk-tag">System Architecture</span>
             </div>
           </div>
           <div class="sk-row reveal">
             <div class="sk-row-label">Prompt Eng.</div>
             <div class="sk-row-tags">
-              <span class="sk-tag">Claude</span
-              ><span class="sk-tag">OpenAI</span
-              ><span class="sk-tag">Copilot</span
-              ><span class="sk-tag">Gemini</span
-              ><span class="sk-tag">Replit</span
-              ><span class="sk-tag">Perplexity</span>
+              <span class="sk-tag">Claude</span>
+              <span class="sk-tag">OpenAI</span>
+              <span class="sk-tag">Copilot</span>
+              <span class="sk-tag">Gemini</span>
+              <span class="sk-tag">Replit</span>
+              <span class="sk-tag">Perplexity</span>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECTS -->
+    <div id="projects" class="projects-section">
+      <div class="projects-inner">
+        <div class="sec-label">What I've built</div>
+        <h2>Projects</h2>
+        <div class="projects-grid">
+          <!-- BinPack -->
+          <a
+            href="https://github.com/sharmasatvik/bin-packing"
+            target="_blank"
+            class="proj-card reveal"
+          >
+            <div class="proj-title">
+              BinPack - 3D Bin Packing Optimizer
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+            </div>
+            <ul class="proj-pts">
+              <li>
+                Full-stack web app that determines the optimal way to pack SKU
+                items into boxes using the
+                <strong>First Fit Decreasing (FFD)</strong> algorithm.
+              </li>
+              <li>
+                Spring Boot REST API accepts box dimensions and a list of items,
+                returning per-box assignments, weight totals, and utilisation
+                percentages.
+              </li>
+              <li>
+                Angular 18 frontend with live metric ↔ imperial unit switching,
+                staggered CSS animations, and reactive state via Angular
+                Signals.
+              </li>
+              <li>
+                Handles edge cases cleanly - oversized and overweight items are
+                flagged as
+                <code
+                  style="
+                    font-size: 11.5px;
+                    background: rgba(255, 255, 255, 0.08);
+                    padding: 1px 5px;
+                    border-radius: 3px;
+                    color: var(--teal-soft);
+                  "
+                  >unpackedItems</code
+                >
+                instead of silently dropped.
+              </li>
+              <li>
+                Algorithm carries an <strong>O(n²)</strong> worst-case
+                complexity with an approximation guarantee of at most (11/9) OPT
+                + 6/9 bins.
+              </li>
+            </ul>
+            <div class="proj-tags">
+              <span class="proj-tag">Java 24</span>
+              <span class="proj-tag">Spring Boot</span>
+              <span class="proj-tag">Angular 18</span>
+              <span class="proj-tag">Maven</span>
+              <span class="proj-tag">FFD Algorithm</span>
+            </div>
+          </a>
+
+          <!-- Interest Calculator -->
+          <a
+            href="https://github.com/sharmasatvik/interest-calculator"
+            target="_blank"
+            class="proj-card reveal"
+          >
+            <div class="proj-title">
+              Interest Rate Calculator
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+            </div>
+            <ul class="proj-pts">
+              <li>
+                Interactive Angular app that calculates and compares
+                <strong>Simple Interest</strong> and
+                <strong>Compound Interest</strong> side-by-side with real-time
+                updates.
+              </li>
+              <li>
+                Supports optional opening balance, annual step-up percentage,
+                and variable investment duration - producing a full year-by-year
+                earnings breakdown.
+              </li>
+              <li>
+                Visual chart plots SI vs CI growth curves across the selected
+                time horizon, making long-term compounding impact immediately
+                visible.
+              </li>
+              <li>
+                Automatically detects the user's location and defaults to the
+                correct currency (₹ INR, $ USD, £ GBP, etc.) without manual
+                input.
+              </li>
+              <li>
+                Planned enhancements include PDF/Excel export and dark mode
+                support.
+              </li>
+            </ul>
+            <div class="proj-tags">
+              <span class="proj-tag">Angular</span>
+              <span class="proj-tag">TypeScript</span>
+              <span class="proj-tag">Node.js</span>
+              <span class="proj-tag">Charts</span>
+              <span class="proj-tag">Geolocation API</span>
+            </div>
+          </a>
         </div>
       </div>
     </div>
