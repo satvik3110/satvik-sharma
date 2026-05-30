@@ -105,7 +105,7 @@
 
       .main {
         background: var(--slate-800);
-        padding: 96px 48px 80px;
+        padding: 60px 48px 80px;
       }
       .main-inner {
         max-width: 1040px;
@@ -261,28 +261,10 @@
       .section {
         max-width: 1040px;
         margin: 0 auto;
-        padding: 72px 48px;
+        padding: 40px 48px;
       }
       .section + .section {
         padding-top: 0;
-      }
-      .sec-label {
-        font-size: 10px;
-        font-weight: 600;
-        letter-spacing: 0.18em;
-        text-transform: uppercase;
-        color: var(--teal);
-        margin-bottom: 16px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-      }
-      .sec-label::after {
-        content: "";
-        flex: 0 0 32px;
-        height: 1.5px;
-        background: var(--teal);
-        opacity: 0.4;
       }
       h2 {
         font-family: "Fraunces", serif;
@@ -349,18 +331,15 @@
       /* EXPERIENCE */
       .exp-wrap {
         background: var(--slate-900);
-        padding: 72px 0;
+        padding: 40px 0;
       }
       .exp-inner {
         max-width: 1040px;
         margin: 0 auto;
         padding: 0 48px;
       }
-      .exp-inner .sec-label {
+      .exp-inner {
         color: var(--teal-soft);
-      }
-      .exp-inner .sec-label::after {
-        background: var(--teal-soft);
       }
       .exp-inner h2 {
         color: var(--white);
@@ -448,6 +427,7 @@
         gap: 8px;
       }
       .tl-pts li {
+        font-family: 'Inter';
         font-size: 13px;
         font-weight: 300;
         color: rgba(255, 255, 255, 0.58);
@@ -466,7 +446,7 @@
       /* SKILLS */
       .skills-section {
         background: var(--white);
-        padding: 72px 0;
+        padding: 40px 0;
       }
       .skills-inner {
         max-width: 1040px;
@@ -493,6 +473,7 @@
         gap: 16px;
       }
       .sk-row-label {
+        font-family: 'Inter';
         font-size: 11px;
         font-weight: 600;
         letter-spacing: 0.1em;
@@ -507,6 +488,7 @@
         gap: 6px;
       }
       .sk-tag {
+        font-family: 'Inter';
         font-size: 12px;
         font-weight: 400;
         color: var(--slate-800);
@@ -519,18 +501,15 @@
       /* PROJECTS */
       .projects-section {
         background: var(--slate-900);
-        padding: 72px 0;
+        padding: 40px 0;
       }
       .projects-inner {
         max-width: 1040px;
         margin: 0 auto;
         padding: 0 48px;
       }
-      .projects-inner .sec-label {
+      .projects-inner  {
         color: var(--teal-soft);
-      }
-      .projects-inner .sec-label::after {
-        background: var(--teal-soft);
       }
       .projects-inner h2 {
         color: var(--white);
@@ -634,21 +613,17 @@
         }
       }
 
-      /* ── BOTTOM: EDUCATION + LINKEDIN ── */
       .bottom-wrap {
         background: var(--page);
-        padding: 72px 0;
+        padding: 40px 0;
       }
       .bottom-inner {
         max-width: 1040px;
         margin: 0 auto;
         padding: 0 48px;
       }
-      .bottom-inner .sec-label {
+      .bottom-inner {
         color: var(--teal);
-      }
-      .bottom-inner .sec-label::after {
-        background: var(--teal);
       }
       .bottom-inner h2 {
         color: var(--slate-800);
@@ -942,8 +917,7 @@
 
     <!-- APPROACH -->
     <div id="approach" class="section">
-      <div class="sec-label">How I work</div>
-      <h2>Engineering is a<br />design discipline.</h2>
+      <h2>Methodology</h2>
       <div class="approach-grid">
         <div class="approach-card reveal">
           <div class="ac-num">01</div>
@@ -978,7 +952,6 @@
     <!-- EXPERIENCE -->
     <div id="experience" class="exp-wrap">
       <div class="exp-inner">
-        <div class="sec-label">Where I've been</div>
         <h2>Experience</h2>
         <div class="timeline">
           <div class="tl-item current reveal">
@@ -1069,8 +1042,7 @@
     <!-- SKILLS -->
     <div id="skills" class="skills-section">
       <div class="skills-inner">
-        <div class="sec-label">Tools &amp; technologies</div>
-        <h2>The stack</h2>
+        <h2>Tools &amp; Technologies
         <div class="skills-table" style="margin-top: 36px">
           <div class="sk-row reveal">
             <div class="sk-row-label">Core</div>
@@ -1152,7 +1124,6 @@
     <!-- PROJECTS -->
     <div id="projects" class="projects-section">
       <div class="projects-inner">
-        <div class="sec-label">What I've built</div>
         <h2>Projects</h2>
         <div class="projects-grid">
           <!-- BinPack -->
@@ -1295,8 +1266,8 @@
     <!-- EDUCATION + LINKEDIN -->
     <div class="bottom-wrap">
       <div class="bottom-inner">
-        <div class="sec-label">Background &amp; connect</div>
         <h2>Education &amp; LinkedIn</h2>
+
         <div class="bottom-grid">
           <!-- Education -->
           <div class="edu-card reveal">
